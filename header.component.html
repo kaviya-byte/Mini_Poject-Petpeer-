@@ -1,0 +1,15 @@
+  <header>
+    <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a href="https://localhost:4200" class="navbar-brand">PetPeer</a></div>
+    
+    
+    <ul class="navbar-nav">
+      <li><a *ngIf="apiService.isUserLoggedIn()" routerLink="/view-pet" class="nav-link"><View-pet></View-pet></a></li>
+      <li><a *ngIf="apiService.isUserLoggedIn()" routerLink="/add-pet" class="nav-link">Add New pet</a></li>
+      <li><a *ngIf="apiService.isUserLoggedIn()" routerLink="/edit-pet" class="nav-link">Edit old pet</a></li>
+      <li><a *ngIf="apiService.isUserLoggedIn()" routerLink="/delete-pet" class="nav-link">Delete pet</a></li>
+      <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+    </ul>
+    </nav>
+    </header>
